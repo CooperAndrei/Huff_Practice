@@ -1,0 +1,19 @@
+#define macro MAIN() = takes(3) returns(1) {
+//the code assumes the three uint are pushed into the LIFO order(top is the last number)
+//stack before: [c,b,a]
+	mul //multiplies b * a; stack: [c, (b * a)]
+	mul //multiplies c * (b * a) ; stack: [(c * b * a)]
+}
+
+// macro approach allows to perform the multiplication without defining a full contract, 
+// making it suitable for inline operations or within larger HUFF programs.
+
+//⠙ Compiling... 60028060093d393df30202
+
+/*renaming the MAIN TO MULTIPLY_THREE_UNITS gave error
+⠙ Compiling... 
+
+Error: Missing Macro Definition For "MAIN"
+-> mul_three.huff */
+
+
